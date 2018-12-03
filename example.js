@@ -7,14 +7,18 @@ var orders = [
 ];
 
 var totalAmount = orders.reduce(function(sum, order) {
+  console.log("The sum is: " + sum, order);
   return sum + order.amount;
 }, 0);
-
-//map and filter are functions that can be used on an array object
-//map filter reject and find are all list transformations - turn your list into something else
-//reduce is not.. reduce is the multi-tool of list transformations
-//reduce can be used to implement fuctions like map, filter, find etc..
-// can be used if you cant find a suitable inbuilt function
+/*
+PRINTS:
+Leannes-MacBook-Pro-2:funfunfunction-js leannelacey-byrne$ node example.js
+The sum is: 0 { amount: 250 }
+The sum is: 250 { amount: 50 }
+The sum is: 300 { amount: 450 }
+The sum is: 750 { amount: 400 }
+The sum is: 1150 { amount: 100 }
+1250*/
 
 //using a for loop
 /*var totalAmount = 0;
