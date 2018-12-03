@@ -4,5 +4,7 @@ let dragon = name => size => element =>
 
 // outputs
 //fluffykins is a tiny dragon that breathes lighning!
+let fluffykinsDragon = dragon("fluffikins");
 
-console.log(dragon("fluffikins")("tiny")("lightning"));
+console.log(fluffykinsDragon("tiny")("lightning"));
+//your function can go through the app and
