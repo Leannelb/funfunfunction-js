@@ -8,11 +8,11 @@ var animals = [
 ];
 
 //better way to do this is with functional programming, the concept behind JS
-
-var dogs = animals.filter(function(animal) {
+var isDog = function(animal) {
   return animal.species === "dog";
-});
+};
 console.log(dogs);
+var dogs = animals.filter(isDog);
 
 // var dogs = [];
 // for (var i = 0; i < animals.length; i++) {
