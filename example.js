@@ -10,8 +10,13 @@ var animals = [
 //map and filter are functions that can be used on an array object
 
 var names = animals.map(function(animal) {
-  return animal.name + " is a " + animal.species;
+  return animal.name;
 });
+
+var names = animals.map(animal => {
+  return animal.name;
+});
+
 // var names = [];
 // for (var i = 0; i < animals.length; i++) {
 //   names.push(animals[i].name);
