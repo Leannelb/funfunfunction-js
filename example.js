@@ -3,6 +3,6 @@
 //common js syntax below
 const fs = require("fs");
 
-var output = fs.readFileSync("data.txt", "utf8");
+var output = fs.readFileSync("data.txt");
 
 console.log("output", output);
