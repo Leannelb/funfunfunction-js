@@ -3,8 +3,18 @@
 //common js syntax below
 const fs = require("fs");
 
-var output = fs.readFileSync("data.txt", "utf8");
+var output = fs
+  .readFileSync("data.txt", "utf8")
+  .trim() //gets rid of the extra extra line at the end
+  .split("\n") //splits it up with a new line
+  .map(line => line.split("\t")); //this has given us an array of arrays!!!
 
 console.log("output", output);
 
-// output <Buffer 6d 61 72 6b 20 6a 6f 6e 73 6f 6e 20 77 61 66 66 6c 65 20 69 72 6f6e 20 20 20 20 38 30 20 20 32 0a 6d 61 72 6b 20 6a 6f 6e 73 6f 6e 20 62 6c 65 6e64 ... 128 more bytes>
+// output
+// mark jonson waffle iron    80  2
+// mark jonson blender    200  1
+// mark jonson knife    10  4
+// Nikita Smith    waffle iron 80  1
+// Nikita Smith    knife 10  2
+// Nikita Smith    pot 20  3
