@@ -6,10 +6,12 @@ var orders = [
   { amount: 100 }
 ];
 
-var totalAmount = orders.reduce(function(sum, order) {
-  console.log("The sum is: " + sum, order);
-  return sum + order.amount;
-}, 0);
+// var totalAmount = orders.reduce(function(sum, order) {
+//   return sum + order.amount;
+// }, 0);
+
+// with arraow functions this becomes:
+var totalAmount = orders.reduce((sum, order) => sum + order.amount, 0);
 /*
 PRINTS:
 Leannes-MacBook-Pro-2:funfunfunction-js leannelacey-byrne$ node example.js
