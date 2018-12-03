@@ -11,3 +11,9 @@ var orders = [
 //reduce is not.. reduce is the multi-tool of list transformations
 //reduce can be used to implement fuctions like map, filter, find etc..
 // can be used if you cant find a suitable inbuilt function
+
+var totalAmount = 0;
+for (var i = 0; i < orders.length; i++) {
+  totalAmount += orders[i].amount;
+}
+console.log(totalAmount);
